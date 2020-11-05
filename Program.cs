@@ -9,48 +9,26 @@ namespace CarObjectTraning
 {
     class Program
     {
-        class car
+        class Person
         {
-             private string carbrand, modelyear;
-            private int scandiMiles;
-          public car(string B, string Å, int M)
-          {
-                carbrand = B;
-                modelyear = Å;
-                scandiMiles = M;
-
-          }
-          public int ScandiMiles()
-          {
-                return scandiMiles;
-          }   
-            public bool UpdateMiles(int newAmountMiles) 
+            public string förnamn, efternamn, hemtelefon, jobbtelefon;
+            public Person(string S,string E,string H, string J)
             {
-                if(newAmountMiles< scandiMiles)
-                {
-                    return false;
-                }
-                else
-                {
-                    scandiMiles = newAmountMiles;
-                    return true;
-                }
+                förnamn = S;
+                efternamn = E;
+                hemtelefon = H;
+                jobbtelefon = J;
             }
-          
+            public void Print()
+            {
+                Console.WriteLine("{0} {1} {2} {3}", förnamn, efternamn, hemtelefon, jobbtelefon);
+                    
+            }
         }
         static void Main(string[] args)
         {
-            
-            car B = new car("Lada", "1990",137672);
-            Console.WriteLine("antal mil = {0}", B.ScandiMiles());
-            if (B.UpdateMiles(237670))
-            {
-                Console.WriteLine("miltalet uppdaterades");
-            }
-            else
-            { 
-                Console.WriteLine("miltalet updaterades inte");
-            }
+            Person Arne = new Person("arne", "saknusem", "1233315513", "75345644564253");
+            Arne.Print();
             Console.ReadKey();
         }
     }
