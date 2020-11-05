@@ -48,7 +48,7 @@ namespace CarObjectTraning
                 Console.WriteLine("miltalet uppdaterades");
             }
             else
-            {
+            { 
                 Console.WriteLine("miltalet updaterades inte");
             }
             Console.ReadKey();
